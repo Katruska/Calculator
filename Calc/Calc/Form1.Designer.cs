@@ -46,6 +46,15 @@
             this.div = new System.Windows.Forms.Button();
             this.mul = new System.Windows.Forms.Button();
             this.dot = new System.Windows.Forms.Button();
+            this.sqrt = new System.Windows.Forms.Button();
+            this.cos = new System.Windows.Forms.Button();
+            this.exp = new System.Windows.Forms.Button();
+            this.tg = new System.Windows.Forms.Button();
+            this.sin = new System.Windows.Forms.Button();
+            this.ln = new System.Windows.Forms.Button();
+            this.sqr = new System.Windows.Forms.Button();
+            this.log = new System.Windows.Forms.Button();
+            this.pi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -53,7 +62,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(12, 37);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 26);
+            this.textBox1.Size = new System.Drawing.Size(295, 26);
             this.textBox1.TabIndex = 0;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -241,24 +250,132 @@
             this.dot.UseVisualStyleBackColor = true;
             this.dot.Click += new System.EventHandler(this.dot_Click);
             // 
+            // sqrt
+            // 
+            this.sqrt.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sqrt.Location = new System.Drawing.Point(184, 69);
+            this.sqrt.Name = "sqrt";
+            this.sqrt.Size = new System.Drawing.Size(37, 30);
+            this.sqrt.TabIndex = 1;
+            this.sqrt.Text = "√";
+            this.sqrt.UseVisualStyleBackColor = true;
+            this.sqrt.Click += new System.EventHandler(this.sqrt_Click);
+            // 
+            // cos
+            // 
+            this.cos.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cos.Location = new System.Drawing.Point(227, 142);
+            this.cos.Name = "cos";
+            this.cos.Size = new System.Drawing.Size(37, 30);
+            this.cos.TabIndex = 1;
+            this.cos.Text = "cos";
+            this.cos.UseVisualStyleBackColor = true;
+            this.cos.Click += new System.EventHandler(this.cos_Click);
+            // 
+            // exp
+            // 
+            this.exp.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exp.Location = new System.Drawing.Point(227, 69);
+            this.exp.Name = "exp";
+            this.exp.Size = new System.Drawing.Size(37, 30);
+            this.exp.TabIndex = 1;
+            this.exp.Text = "Exp";
+            this.exp.UseVisualStyleBackColor = true;
+            this.exp.Click += new System.EventHandler(this.exp_Click);
+            // 
+            // tg
+            // 
+            this.tg.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tg.Location = new System.Drawing.Point(227, 176);
+            this.tg.Name = "tg";
+            this.tg.Size = new System.Drawing.Size(37, 30);
+            this.tg.TabIndex = 1;
+            this.tg.Text = "tg";
+            this.tg.UseVisualStyleBackColor = true;
+            this.tg.Click += new System.EventHandler(this.tg_Click);
+            // 
+            // sin
+            // 
+            this.sin.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sin.Location = new System.Drawing.Point(227, 105);
+            this.sin.Name = "sin";
+            this.sin.Size = new System.Drawing.Size(37, 30);
+            this.sin.TabIndex = 1;
+            this.sin.Text = "sin";
+            this.sin.UseVisualStyleBackColor = true;
+            this.sin.Click += new System.EventHandler(this.sin_Click);
+            // 
+            // ln
+            // 
+            this.ln.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ln.Location = new System.Drawing.Point(270, 142);
+            this.ln.Name = "ln";
+            this.ln.Size = new System.Drawing.Size(37, 30);
+            this.ln.TabIndex = 1;
+            this.ln.Text = "ln";
+            this.ln.UseVisualStyleBackColor = true;
+            this.ln.Click += new System.EventHandler(this.ln_Click);
+            // 
+            // sqr
+            // 
+            this.sqr.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sqr.Location = new System.Drawing.Point(270, 69);
+            this.sqr.Name = "sqr";
+            this.sqr.Size = new System.Drawing.Size(37, 30);
+            this.sqr.TabIndex = 1;
+            this.sqr.Text = "x^2";
+            this.sqr.UseVisualStyleBackColor = true;
+            this.sqr.Click += new System.EventHandler(this.sqr_Click);
+            // 
+            // log
+            // 
+            this.log.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.log.Location = new System.Drawing.Point(270, 176);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(37, 30);
+            this.log.TabIndex = 1;
+            this.log.Text = "log";
+            this.log.UseVisualStyleBackColor = true;
+            this.log.Click += new System.EventHandler(this.log_Click);
+            // 
+            // pi
+            // 
+            this.pi.Font = new System.Drawing.Font("Bookman Old Style", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.pi.Location = new System.Drawing.Point(270, 105);
+            this.pi.Name = "pi";
+            this.pi.Size = new System.Drawing.Size(37, 30);
+            this.pi.TabIndex = 1;
+            this.pi.Text = "pi";
+            this.pi.UseVisualStyleBackColor = true;
+            this.pi.Click += new System.EventHandler(this.pi_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(236, 219);
+            this.ClientSize = new System.Drawing.Size(323, 219);
+            this.Controls.Add(this.pi);
+            this.Controls.Add(this.sin);
             this.Controls.Add(this.mul);
             this.Controls.Add(this.button12);
+            this.Controls.Add(this.log);
+            this.Controls.Add(this.tg);
             this.Controls.Add(this.add);
+            this.Controls.Add(this.sqr);
             this.Controls.Add(this.n0);
+            this.Controls.Add(this.exp);
             this.Controls.Add(this.div);
             this.Controls.Add(this.n9);
             this.Controls.Add(this.n8);
+            this.Controls.Add(this.ln);
             this.Controls.Add(this.n7);
+            this.Controls.Add(this.cos);
             this.Controls.Add(this.sub);
             this.Controls.Add(this.n6);
             this.Controls.Add(this.n5);
             this.Controls.Add(this.n4);
             this.Controls.Add(this.dot);
+            this.Controls.Add(this.sqrt);
             this.Controls.Add(this.PlusMinus);
             this.Controls.Add(this.n3);
             this.Controls.Add(this.n2);
@@ -291,6 +408,15 @@
         private System.Windows.Forms.Button div;
         private System.Windows.Forms.Button mul;
         private System.Windows.Forms.Button dot;
+        private System.Windows.Forms.Button sqrt;
+        private System.Windows.Forms.Button cos;
+        private System.Windows.Forms.Button exp;
+        private System.Windows.Forms.Button tg;
+        private System.Windows.Forms.Button sin;
+        private System.Windows.Forms.Button ln;
+        private System.Windows.Forms.Button sqr;
+        private System.Windows.Forms.Button log;
+        private System.Windows.Forms.Button pi;
     }
 }
 

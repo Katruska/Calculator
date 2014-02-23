@@ -145,9 +145,91 @@ namespace Calc
             }
             catch (Exception) { }
         }
+        //корень
+        private void sqrt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox1.Text.Length > 0)
+                {
+                    textBox1.Text = Math.Sqrt(double.Parse(textBox1.Text)).ToString();
+                }
 
-       
-
+            }
+            catch (Exception) { }
+        }
+        //cos
+        private void cos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = Math.Cos(double.Parse(textBox1.Text)).ToString();
+            }
+            catch (Exception) { }
+        }
+        //sin
+        private void sin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = Math.Sin(double.Parse(textBox1.Text)).ToString();
+            }
+            catch (Exception) { }
+        }
+        //tg
+        private void tg_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = Math.Tan(double.Parse(textBox1.Text)).ToString();
+            }
+            catch (Exception) { }
+        }
+        //exp
+        private void exp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = Math.Exp(double.Parse(textBox1.Text)).ToString();
+            }
+            catch (Exception) { }
+        }
+        //log
+        private void log_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = Math.Log(double.Parse(textBox1.Text)).ToString();
+            }
+            catch (Exception) { }
+        }
+        //ln
+        private void ln_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = Math.Log10(double.Parse(textBox1.Text)).ToString();
+            }
+            catch (Exception) { }
+        }
+        //pi
+        private void pi_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = Math.PI.ToString();
+            }
+            catch (Exception) { }
+        }
+        //x^2
+        private void sqr_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = Math.Pow(double.Parse(textBox1.Text),2).ToString();
+            }
+            catch (Exception) { }
+        }
 
         #region numbers
         private void n1_Click(object sender, EventArgs e)
@@ -218,6 +300,26 @@ namespace Calc
 
 
         #endregion
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+       
 
         
 
