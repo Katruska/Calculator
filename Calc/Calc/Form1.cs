@@ -29,6 +29,7 @@ namespace Calc
             nonstate
         }
         #endregion
+
         //запрет на ввод букв(только цифры и знаки)
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -88,18 +89,15 @@ namespace Calc
             }
         }
 
-        
-
-        #region арифметические действия(нажатия на кнопки)
-       //умножение
+        #region operanions
+        //умножение
         private void mul_Click(object sender, EventArgs e)
         {
             if (CurrentState == state.nonstate)
             {
                 CurrentState = state.multiplication;
                 buff = textBox1.Text;
-                textBox1.Text = "";
-                textBox1.Focus();//focus on textbox1 and clear it
+                textBox1.Text = "*";
             }
 
         }
@@ -110,8 +108,7 @@ namespace Calc
             {
                 CurrentState = state.substraction;
                 buff = textBox1.Text;
-                textBox1.Text = "";
-                textBox1.Focus();//focus on textbox1 and clear it
+                textBox1.Text = "-";
             }
         }
         //деление
@@ -121,8 +118,7 @@ namespace Calc
             {
                 CurrentState = state.divide;
                 buff = textBox1.Text;
-                textBox1.Text = "";
-                textBox1.Focus();//focus on textbox1 and clear it
+                textBox1.Text = "/";
             }
         }
        //сложение
@@ -132,8 +128,7 @@ namespace Calc
             {
                 CurrentState = state.addiction;
                 buff = textBox1.Text;
-                textBox1.Text = "";
-                textBox1.Focus();//focus on textbox1 and clear it
+                textBox1.Text = "+";
             }
         }
         //+/-
@@ -230,105 +225,103 @@ namespace Calc
             }
             catch (Exception) { }
         }
+        //1/x
+        private void del_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = (1/(double.Parse(textBox1.Text))).ToString();
+            }
+            catch (Exception) { }
+        }
+        
+        #region clean
+        //C
+        private void c_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            CurrentState = state.nonstate;
+            buff = "";
+          
+        }
+        //CE
+       private void ce_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+        //←
+        private void back_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+            }
+            catch (Exception) { }
+        }
 
         #region numbers
         private void n1_Click(object sender, EventArgs e)
         {
             textBox1.Text += "1";
-            textBox1.Focus();
         }
 
         private void n2_Click(object sender, EventArgs e)
         {
             textBox1.Text += "2";
-            textBox1.Focus();
         }
 
         private void n3_Click(object sender, EventArgs e)
         {
             textBox1.Text += "3";
-            textBox1.Focus();
         }
 
         private void n4_Click(object sender, EventArgs e)
         {
             textBox1.Text += "4";
-            textBox1.Focus();
         }
 
         private void n5_Click(object sender, EventArgs e)
         {
             textBox1.Text += "5";
-            textBox1.Focus();
         }
 
         private void n6_Click(object sender, EventArgs e)
         {
             textBox1.Text += "6";
-            textBox1.Focus();
         }
 
         private void n7_Click(object sender, EventArgs e)
         {
             textBox1.Text += "7";
-            textBox1.Focus();
         }
 
         private void n8_Click(object sender, EventArgs e)
         {
             textBox1.Text += "8";
-            textBox1.Focus();
         }
 
         private void n9_Click(object sender, EventArgs e)
         {
             textBox1.Text += "9";
-            textBox1.Focus();
         }
 
         private void n0_Click(object sender, EventArgs e)
         {
             textBox1.Text += "0";
-            textBox1.Focus();
         }
        
         private void dot_Click(object sender, EventArgs e)
         {
             textBox1.Text += ",";
-            textBox1.Focus();
         }
-
-
         #endregion
 
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-       
-
-        
-
-
-
-
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 f2= new Form2();
+            f2.Show();
+        }
         #endregion
-
-
-
+        #endregion
     }
 }
